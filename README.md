@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## 1. react 개념
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 본인이 생각하는 react에 대해서 서술하시오
 
-## Available Scripts
+   facebook에서 제공해주는 프론트엔드 라이브러리이며, 자바스크립트에 HTML을 포함하는 JSX와 단방향 데이터 바인딩을 사용하고 있습니다. 그리고 가상돔을 사용하여 웹 어플리케이션의 성능을 극대화 시켰습니다.
 
-In the project directory, you can run:
+   리액트는 컴포넌트 기반의 라이브러리이고 컴포넌트는 재사용성을 가지고 있기 때문에 반복적으로 입력할 필요가 없어서 효율적입니다.
 
-### `yarn start`
+   리액트 컴포넌트는 라이프사이클이 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   클래스컴포넌트는 라이프사이클이 컴포넌트에 중심이 맞춰 있어 클래스가 마운트 되려할 때(componentWillMount), 마운트 되고 나서(componentDidMount), 업데이트 되었을 때(componentDidUpdate), 언마운트(componentWillUnmount) 될 때 실행됩니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   하지만 함수컴포넌트에서는 useEffect는 데이터의 개수에 따라 여러 번 사용하게 됩니다.
 
-### `yarn test`
+2. 상태관리의 개념에 대해서 설명하시오
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   상태는 동적이면서 렌더링에 영향을 주는 값이고 상태관리란 사용자에게 보여줄 정보, 웹 어플리케이션에서 사용할 정보 상태를 관리하는 하는 것 입니다.
 
-### `yarn build`
+## 2. 아래 요구사항에 맞는 웹을 개발하시오
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+state와 props를 통해 상태를 관리하며 TodoList가 추가될 때 앞에 해당 번호가 붙을 수 있도록 구현했습니다. 또한 삭제 버튼 클릭 후 재정렬이 되도록 구현했습니다.
+(pages: Todo.js, components: TodoList.js)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. Rest API 활용
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+axios 라이브러리를 활용하여 API호출을 하였으며 POST 메소드를 통해 input 데이터를 서버로 전달했습니다.
+(pages: RestApi.js)
 
-### `yarn eject`
+## 4. 추가 기능 구현
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+반응형을 구현하여 모바일에서도 볼 수 있도록 화면을 구성하였습니다.
